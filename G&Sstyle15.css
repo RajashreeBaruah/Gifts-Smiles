@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgray;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.wrapper {
+    margin-top: 10%;
+}
+
+.wrapper h2 {
+    font-size: 52px;
+    margin-bottom: 6px;
+    text-align: center;
+    color: rgb(46, 1, 27);
+}
+
+.wrapper h4 {
+    color:rgb(31, 61, 78);
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 12px 0;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.mode {
+    display: flex;
+    text-align: center;
+    width: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.mode .way {
+    background-color: rgb(250, 182, 182);
+    margin: 5px;
+    margin-bottom: 50px;
+    width: 350px;
+    padding: 45px;
+    line-height: 20px;
+    color: rgb(3, 3, 39);
+    position: relative;
+}
+
+.mode .way h3 {
+    font-size: 26px;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+.mode .way p.slogan {
+    color:rgb(31, 61, 78);
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 12px 0;
+}
+
+.mode .way ul {
+    text-align: left;
+}
+
+.navbar {
+    height: 12%;
+    display: flex;
+    align-items: center;
+    background: rgba(0,0,0,0.7);
+    padding-right: 8%;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 60px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: bolder;
+}

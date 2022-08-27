@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gifts and Smiles | Donate | Time</title>
+
+    <link rel="stylesheet" href="G&Sstyleform.css">
+    <style>
+		input:invalid {
+  		border: red solid 3px;
+		}
+        input,
+        input:valid {
+            border-color: #ccc;
+        }
+    </style>
+
+    <script>
+            function validate()
+            {
+                document.getElementById("sub").disabled=false;
+                var a=document.forms["time"]["fname"].value ;
+                var b=document.forms["time"]["lname"].value ;
+                var c=document.forms["time"]["male"].checked;
+                var d=document.forms["time"]["female"].checked;
+                var e=document.forms["time"]["others"].checked;
+                var f=document.forms["time"]["address"].value;
+                var g=document.forms["time"]["email"].value;
+                var h=document.forms["time"]["pincode"].value;
+                var i=document.getElementById("center").length;
+                var j=document.getElementById("sub").checked;
+                var k=document.getElementById("extra").checked;
+                var l=document.getElementById("lang").checked;
+                var m=document.getElementById("campaigns").checked;
+                
+                if ( a==="" || l==="" || d==="" || e==="" || f==="" || h==="" || i==="" || g==0 || k==="" || (b==false && c==false && j==false))
+                {
+                    document.getElementById("sub").disabled=true;
+                }
+            }
+	
+    </script>
+</head>
+<body><div class="container">
+	<form name="time" action="G&Stime.php" method="POST">
+		<h1 class="main_heading">LET'S DONATE</h1>
+		<hr>
+		(Required fields are followed by <font style="color: red;">*</font>)<br><br>
+		<h2>Donor Details</h2>
+	
+		First Name <font style="color: red;">*</font> : <input type="text" name="fname" pattern="[a-zA-Z]*" title="First name should only contain one word, eg. John, Ricky, etc." onkeyup="validate()">&nbsp;&nbsp;
+                		Last Name <font style="color: red;">*</font> : <input type="text" name="lname" pattern="[a-zA-Z]*" title="Last name should only contain one word, eg. Roy, Das, etc." onkeyup="validate()">
+                <br><br>
+                <br><br>
+                <fieldset>
+                	<legend>Gender <font style="color: red;">*</font></legend>
+                        Male <input type="radio" name="gender" id="male" required>
+                        Female <input type="radio" name="gender" id="female" required>
+	     Others <input type="radio" name="gender" id="others" required>
+                </fieldset>
+                <br><br>
+                Address  : <font style="color: red;">* </font> <textarea cols="65" rows="5" name="address" id="address" required></textarea>
+                <br>
+                <br>
+                Email : <font style="color: red;">*</font> <input type="email" name="email" id="email" placeholder="abc@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Email must of the format abc@xyz.com, pqr@stw.in, etc." onkeyup="validate()">
+                <br>
+                <br>
+                PIN <font style="color: red;">*</font> : <input type="number" name="pincode" id="pin" pattern="[0-9]{6}" title="Enter 6 digit PIN code" onkeyup="validate()">
+                <br><br><hr>
+		<br>
+	<h2>How would you like to spend your time ?</h2>
+		<fieldset>
+			<legend>Select how would you like to spend some time <font style="color: red;"> *</font> :</legend>
+			<br>
+			<input type="checkbox" name="time" id="sub" value="subject">Teach a subject
+			<br><br>
+			<input type="checkbox" name="time" id="extra" value="extra curricular activity">Teach an extra curricular activity
+			<br><br>
+			<input type="checkbox" name="time" id="lang" value="language">Teach a language
+			<br><br>
+			<input type="checkbox" name="time" id="campaigns" value="drives and campaigns">Awareness drives and campaigns
+		</fieldset>
+		<br>
+		<br>
+		<fieldset>
+			<legend>Center <font style="color: red;">*</font> :</legend>
+			<font style="font-size: small;">(You would have to go to a particular center)</font>
+			<br>
+			<select name="center" id="center" required>
+                    		<option value="">--Select a center--</option>
+                    		<option value="khanapara">Khanapara</option>
+                    		<option value="jalukbari">Jalukbari</option>
+                    		<option value="beltola">Beltola</option>
+                    		<option value="abc">ABC</option>
+                		</select>
+		</fieldset>
+                		<br><br>
+		<input type="reset" value="Reset">&nbsp;&nbsp;<input type="submit" value="Submit Details" id="sub">
+		<hr>
+	</form>
+</body>
+</html>

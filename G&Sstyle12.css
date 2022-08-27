@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgray;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.wrapper {
+    margin-top: 10%;
+}
+
+.wrapper h2 {
+    font-size: 52px;
+    margin-bottom: 60px;
+    text-align: center;
+    color: rgb(10, 10, 65);
+}
+
+.mode {
+    display: flex;
+    text-align: center;
+    width: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.mode .way {
+    background-color: rgb(163, 163, 235);
+    margin: 5px;
+    margin-bottom: 50px;
+    width: 300px;
+    padding: 45px;
+    line-height: 20px;
+    color: rgb(29, 29, 85);
+    position: relative;
+}
+
+.mode .way h3 {
+    font-size: 26px;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+.mode .way p.slogan {
+    color:rgb(31, 61, 78);
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 12px 0;
+}
+
+.mode .way .way_img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translate(-50%);
+    background: rgb(163, 163, 235);
+}
+
+mode .way .way_img img {
+    width: 100px;
+    height: 100px;
+}
+
+.clip {
+    clip-path: circle();
+    width: 100px;
+    height: 100px;
+}
+
+.way a {
+    border: 1px solid #200f6b;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 15px;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    color:rgb(6, 7, 73);
+}
+
+.way a:hover {
+    box-shadow: 0px 0px 5px rgb(113, 27, 184);
+    background-color: rgba(112, 69, 228, 0.3);
+}
+
+.navbar {
+    height: 12%;
+    display: flex;
+    align-items: center;
+    background: rgba(0,0,0,0.7);
+    padding-right: 8%;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 60px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: bolder;
+}
